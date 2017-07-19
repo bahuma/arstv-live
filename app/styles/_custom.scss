@@ -1,0 +1,40 @@
+.responsive-embed {
+  position: relative;
+  padding-bottom: 56.25%; /* ratio 16x9 */
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+.responsive-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.live-chat,
+.live-video {
+  @media (max-width: $grid-desktop-breakpoint) {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100% !important;
+  }
+}
+
+.live-chat {
+  iframe {
+    width: 100%;
+    height: 100%;
+
+    @media (min-width: $grid-desktop-breakpoint) {
+      position: absolute;
+    }
+
+    @media (max-width: $grid-desktop-breakpoint) {
+      min-height: 400px;
+    }
+  }
+}
